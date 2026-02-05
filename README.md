@@ -16,6 +16,14 @@ docker compose up -d
 
 This will create DB `student_management` and apply `db/init.sql`.
 
+If you don't have Docker, run any MySQL-compatible server locally (MySQL 8 or MariaDB),
+then create the DB and apply the schema:
+
+```bash
+mysql -u root -p -e "CREATE DATABASE student_management;"
+mysql -u root -p student_management < db/init.sql
+```
+
 ### 2) Configure backend env
 
 ```bash
